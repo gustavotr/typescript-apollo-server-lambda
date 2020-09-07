@@ -27,7 +27,7 @@ const serverlessConfiguration: Serverless = {
     },
   },
   functions: {
-    hello: {
+    graphql: {
       handler: 'handler.graphqlHandler',
       events: [
         {
