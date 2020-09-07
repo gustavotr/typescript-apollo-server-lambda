@@ -4,8 +4,7 @@
   "description": "Apollo Server Lambda using Typescript",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "serverless offline"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "apollo-server-lambda": "^2.17.0",
