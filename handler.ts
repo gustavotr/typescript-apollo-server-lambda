@@ -1,23 +1,11 @@
 import 'source-map-support/register';
-import { ApolloServer, gql } from 'apollo-server-lambda';
-
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-// Provide resolver functions for your schema fields
-const resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-  },
-};
-
+import { ApolloServer } from 'apollo-server-lambda';
+import schema from './src/schema';
+import { createContext } from './src/context';
 
 const server = new ApolloServer({ 
-  typeDefs, 
-  resolvers,
+  schema,
+  context: createContext(),
   playground: {
     endpoint: "/dev/graphql"
   }

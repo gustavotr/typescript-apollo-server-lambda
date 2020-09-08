@@ -1,13 +1,33 @@
 {
-  "compilerOptions": {
+  "baseUrl": "types",
+  "typeRoots": ["types"],
+  "compilerOptions": {    
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode":true,
+    "allowUnusedLabels":true,
+    "baseUrl":"src/",
+    "declaration":false,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
     "lib": ["es2017"],
-    "removeComments": true,
+    "listFiles":false,
+    "module": "commonjs",
     "moduleResolution": "node",
+    "noImplicitAny":false,
+    "noImplicitReturns":false,
+    "noImplicitUseStrict":false,
+    "noLib":false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "sourceMap": true,
+    "outDir":"dist/",
+    "pretty":true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap":true,
     "target": "es2017",
-    "outDir": "lib"
   },
   "include": ["./**/*.ts"],
   "exclude": [
@@ -15,6 +35,7 @@
     ".serverless/**/*",
     ".webpack/**/*",
     "_warmup/**/*",
-    ".vscode/**/*"
+    ".vscode/**/*",
+    "prisma/**/*"
   ]
 }

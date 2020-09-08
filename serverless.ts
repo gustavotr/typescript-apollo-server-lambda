@@ -1,8 +1,9 @@
 import type { Serverless } from 'serverless/aws';
+import * as pkgJson from './package.json';
 
 const serverlessConfiguration: Serverless = {
   service: {
-    name: 'typescript-apollo-server-lambda',
+    name: pkgJson.name,
     // app and org for use with dashboard.serverless.com
     // app: your-app-name,
     // org: your-org-name,
